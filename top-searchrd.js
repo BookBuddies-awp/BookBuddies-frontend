@@ -5,5 +5,5 @@ async function topSearch() {
         },
     })
     return response.json();
-}
+};
 export default topSearch;
