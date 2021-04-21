@@ -1,15 +1,18 @@
 
 var app = angular.module('myApp', []);
-app.controller('mycontroller', async function($scope, $http) {
-    const headers={"Authorization":"x0G4Q1Rceqa907jhTmrD"};
- await $http.get("https://bookbuddies-api.herokuapp.com/api/bestsellers",{headers})
-  .then(function(response) {
-      data=response.json();
-      console.log("elo"+data);
-    $scope.myWelcome = data[0].title;
-  });
-});
+app.controller('mycontroller', async function ($scope, $http) {
+  await $http({
+    method: 'GET',
+    url: 'https://bookbuddies-api.herokuapp.com/api/bestsellers',
+    headers: { "Authorization": "x0G4Q1Rceqa907jhTmrD" }
+  })
 
+    .then(function (response) {
+
+      console.log("elo" + response.data[0]);
+      $scope.myWelcome = response.data[0].title;
+    });
+});
 
 
 
