@@ -2,37 +2,155 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" ng-controller='mycontroller'class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" ng-controller='mycontroller' class="no-js">
+<!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title> BookBuddies</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="icon" href="image/main_logo.icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+  <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/tooplate-style.css">
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
+
 <body>
-  
+  <div class="container">
+    <header class="tm-site-header">
+      <a href="index.html">
+        <h1 class="tm-site-name">
+          <img src="image/main_logo.icon" alt="logo" class="main-logo">
+          BookBuddies
+        </h1>
+      </a>
+      <p class="tm-site-description">Your Online Bookstore</p>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+      <!-- <nav class="navbar navbar-expand-md tm-main-nav-container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmMainNav" aria-controls="tmMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+            </button>
 
- 
-  <p>Today's welcome message is:</p>
-  <h1>{{myWelcome}}</h1>
-  <header>
-    
-  </header>
-  <main>
-  </main>
+            <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
+                <ul class="nav nav-fill tm-main-nav-ul">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Catalogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div> 
+        </nav> -->
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+    </header>
+
+    <div class="tm-main-content">
+      <section class="tm-margin-b-l">
+        <header>
+          <h2 class="tm-main-title">Recommended for you</h2>
+        </header>
+
+        <div class="tm-gallery">
+          <div class="row">
+            <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item" ng-repeat="book in books">
+              <a href="preview.html">
+                <div class="tm-gallery-item-overlay">
+                  <img src="{{book.coverImage}}" alt="Image" class="img-fluid tm-img-center">
+                </div>
+
+                <p class="tm-figcaption">{{book.title}}</p>
+              </a>
+            </figure>
+            <!-- <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/beautiful-disaster.jpg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">beautiful disaster</p>
+                        </a>
+                    </figure>
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/harry-potter.jpeg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">Harry Potter</p>
+                        </a>
+                    </figure>
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/old-man-and-the-sea.jpg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">Old man and the sea</p>
+                        </a>
+                    </figure>
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/percy-jackson.jpg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">Percy Jackson</p>
+                        </a>
+                    </figure>
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/pride-and-prejudice.jpg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">Pride and Prejudice</p>
+                        </a>
+                    </figure>
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/rich-dad-poor-dad.jpg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">Rich dad Poor dad</p>
+                        </a>
+                    </figure>
+                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                        <a href="preview.html">
+                            <div class="tm-gallery-item-overlay">
+                                <img src="image/sapiens.jpg" alt="Image" class="img-fluid tm-img-center">
+                            </div>
+                            <p class="tm-figcaption">Sapiens</p>
+                        </a>
+                    </figure>  -->
+          </div>
+        </div>
+
+        <nav class="tm-gallery-nav">
+          <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="#">1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">2</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">3</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">4</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <footer>
+      by BookBuddies
+    </footer>
+  </div>
+
+
+  <!-- <script src="/app/js/jquery-1.11.3.min.js"></script>          
+ <script src="/app/js//popper.min.js"></script>               
+ <script src="/app/js//bootstrap.min.js"></script>            
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script> -->
+
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
@@ -41,4 +159,5 @@
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
 </body>
+
 </html>
