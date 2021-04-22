@@ -25,9 +25,9 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" ng-view>
     <header class="tm-site-header">
-      <a href="index.html">
+      <a href="#/!">
         <h1 class="tm-site-name">
           <img src="image/main_logo.icon" alt="logo" class="main-logo">
           BookBuddies
@@ -62,7 +62,7 @@
         <div class="tm-gallery">
           <div class="row">
             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item" ng-repeat="book in books">
-              <a href="preview.html">
+              <a href="#!details">
                 <div class="tm-gallery-item-overlay">
                   <img src="{{book.coverImage}}" alt="Image" class="img-fluid tm-img-center">
                 </div>
@@ -70,62 +70,7 @@
                 <p class="tm-figcaption">{{book.title}}</p>
               </a>
             </figure>
-            <!-- <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/beautiful-disaster.jpg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">beautiful disaster</p>
-                        </a>
-                    </figure>
-                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/harry-potter.jpeg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">Harry Potter</p>
-                        </a>
-                    </figure>
-                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/old-man-and-the-sea.jpg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">Old man and the sea</p>
-                        </a>
-                    </figure>
-                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/percy-jackson.jpg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">Percy Jackson</p>
-                        </a>
-                    </figure>
-                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/pride-and-prejudice.jpg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">Pride and Prejudice</p>
-                        </a>
-                    </figure>
-                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/rich-dad-poor-dad.jpg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">Rich dad Poor dad</p>
-                        </a>
-                    </figure>
-                    <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                        <a href="preview.html">
-                            <div class="tm-gallery-item-overlay">
-                                <img src="image/sapiens.jpg" alt="Image" class="img-fluid tm-img-center">
-                            </div>
-                            <p class="tm-figcaption">Sapiens</p>
-                        </a>
-                    </figure>  -->
+
           </div>
         </div>
 
@@ -158,6 +103,7 @@
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
+ 
 </body>
 
 </html>

@@ -9,6 +9,8 @@ app.controller('mycontroller', async function ($scope, $http) {
     $scope.books = response.data;
     console.log($scope.books)
   });
+
+
 });
 
 
