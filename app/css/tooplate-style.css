@@ -324,6 +324,64 @@ p.tm-margin-b-p {
   font-size: 1.5rem;
 }
 
+.search
+{
+	/* border: 2px solid #CF5C3F; */
+	overflow: auto;
+	border-radius: 15px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+  margin-top: 10rem; 
+  margin-right: 140px;
+  margin-left: 140px;
+  
+}
+
+/* .search input[type="text"]
+{
+	border: 0px;
+	width: 70%;
+	padding: 10px 10px;
+} */
+
+.sinput{
+  border: 0px;
+	width: 90%;
+	padding: 10px 10px;
+}
+
+.sinput:focus
+{
+	outline: 0;
+}
+
+.search input[type="submit"]
+{
+	border: 0px;
+	background: none;
+	background-color: #CF5C3F;
+	color: #fff;
+	float: right;
+	padding: 10px;
+	border-top-right-radius: 5px;
+	-moz-border-radius-top-right: 5px;
+	-webkit-border-radius-top-right: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottom-right: 5px;
+	-webkit-border-radius-bottom-right: 5px;
+        cursor:pointer;
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	.search
+	{
+		width: 95%;
+		margin: 0 auto;
+	}
+
+}
+
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
