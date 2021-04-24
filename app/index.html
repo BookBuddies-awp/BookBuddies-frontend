@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" ng-controller='mycontroller' class="no-js">
+<html lang="en" ng-app="myApp" class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -25,15 +25,17 @@
 </head>
 
 <body>
-  <div class="container" ng-view>
+  <div class="container">
     <header class="tm-site-header">
-      <a href="#/!">
+      <a href="/">
         <h1 class="tm-site-name">
           <img src="image/main_logo.icon" alt="logo" class="main-logo">
           BookBuddies
         </h1>
       </a>
       <p class="tm-site-description">Your Online Bookstore</p>
+
+
 
       <!-- <nav class="navbar navbar-expand-md tm-main-nav-container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmMainNav" aria-controls="tmMainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,37 +55,8 @@
 
     </header>
 
-    <div class="tm-main-content">
-      <section class="tm-margin-b-l">
-        <header>
-          <h2 class="tm-main-title">Recommended for you</h2>
-        </header>
+    <div ng-view></div>
 
-        <div class="tm-gallery">
-          <div class="row">
-            <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item" ng-repeat="book in books">
-              <a href="#!details">
-                <div class="tm-gallery-item-overlay">
-                  <img src="{{book.coverImage}}" alt="Image" class="img-fluid tm-img-center">
-                </div>
-
-                <p class="tm-figcaption">{{book.title}}</p>
-              </a>
-            </figure>
-
-          </div>
-        </div>
-
-        <nav class="tm-gallery-nav">
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="#">1</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">2</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">3</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">4</a></li>
-          </ul>
-        </nav>
-      </section>
-    </div>
 
     <footer>
       by BookBuddies
@@ -99,11 +72,13 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="recommended.js"></script>
+  <script src="./services//services.js"></script>
+  <script src="./controllers/recommendedBooksController.js"></script>
+  <script src="./controllers/bookDetailsController.js"></script>
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
- 
+
 </body>
 
 </html>
