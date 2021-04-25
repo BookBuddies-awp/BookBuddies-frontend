@@ -7,14 +7,14 @@
             <h2 class="tm-blue-text tm-margin-b-p">{{book.title}}</h2>
             <p class="tm-margin-b-p">
                 {{book.description}}
-                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti dolore aut laborum, vero saepe reiciendis soluta dolores, natus, quo officia ab. Laudantium magni enim, cupiditate iure itaque numquam nam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquid, distinctio non inventore, molestiae quae laboriosam ex aspernatur molestias adipisci iste! Assumenda voluptas ut tempora perspiciatis rem eligendi ipsam illo!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ad qui, rem quidem voluptate assumenda minima reiciendis totam hic delectus consequatur possimus maiores necessitatibus, numquam voluptatum rerum voluptates praesentium voluptatem. -->
+            </p>
+            <p class="tm-blue-text tm-margin-b-s">
+                Author: <span class="tm-blue-text" ng-repeat="author in book.authors">{{ author }}</span>
             </p>
             <p class="tm-blue-text tm-margin-b-s">
                 Categories: <span class="tm-blue-text" ng-repeat="category in book.categories">{{ category }}</span>
             </p>
-            <p class="tm-blue-text tm-margin-b-s">Views: 10,890</p>
+            <p class="tm-blue-text tm-margin-b-s">Pages: {{book.pageCount}}</p>
             <p class="tm-blue-text tm-margin-b">
                 Rating: <img src="image/star.png" alt="Star image" />
                 <img src="image/star.png" alt="Star image" />
