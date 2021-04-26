@@ -1,9 +1,10 @@
 var app = angular.module('myApp');
 app.controller('searchController', function ($scope, booksService) {
-    $scope.searchQuery;
+  // console.log($scope.searchQuery);
 
-    console.log($scope.searchQuery);
-    $scope.searchBooks = function () {
-        $scope.books = booksService.searchBooks($scope.searchQuery);
-    };
+  booksService.searchBooks().then(function (res) {
+    $scope.searchedBooks = res;
+    // $scope.searchedBooks = booksService.getSearchedBooks();
+    console.log($scope.searchedBooks);
+  });
 });

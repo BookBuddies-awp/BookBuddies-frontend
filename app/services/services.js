@@ -2,12 +2,15 @@ var app = angular.module('myApp');
 
 app.service('booksService', function ($http) {
   var books = [],
+    searchedBooks = [],
     getBooksList,
     searchBooks,
     onSelectBook,
     getSelectedBook,
-    getSearchBooks,
-    selectedBook;
+    getSearchedBooks,
+    selectedBook,
+    searchQuery,
+    setSearchQuery;
 
   getBooksList = function () {
     return $http({
@@ -20,18 +23,27 @@ app.service('booksService', function ($http) {
       return books;
     });
   };
-  
-  searchBooks = function (name) {
-    console.log(name);
+
+  searchBooks = function () {
+    // console.log(name);
     return $http({
       method: 'GET',
-      url: `https://bookbuddies-api.herokuapp.com/api/search?q=${name}`,
+      url: `https://bookbuddies-api.herokuapp.com/api/search?q=${searchQuery}`,
       headers: { Authorization: 'x0G4Q1Rceqa907jhTmrD' },
     }).then(function (response) {
-      books = response.data;
-      console.log(books);
-      return books;
+      searchedBooks = response.data;
+      // console.log(books);
+      console.log(searchedBooks);
+      return searchedBooks;
     });
+  };
+
+  setSearchQuery = function (query) {
+    searchQuery = query;
+  };
+
+  getSearchedBooks = function () {
+    return searchedBooks;
   };
 
   onSelectBook = function (book) {
@@ -48,6 +60,7 @@ app.service('booksService', function ($http) {
     onSelectBook: onSelectBook,
     getSelectedBook: getSelectedBook,
     searchBooks: searchBooks,
-    getSearchBooks: getSearchBooks
+    getSearchedBooks: getSearchedBooks,
+    setSearchQuery: setSearchQuery,
   };
 });

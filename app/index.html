@@ -30,12 +30,12 @@
       </a>
       <p class="tm-site-description">Your Online Bookstore</p>
 
-      <div class="search" ng-controller="searchController">
+      <div class="search" ng-controller="searchbarController">
         <form class="search-form">
           <input type="text" ng-model="searchQuery" placeholder="Search for books, authors, categories and more.."
             class="sinput">
           <a href="#!/search">
-          <button type="submit" value="Submit" ng-click="searchBooks()">Submit</button></a>
+            <button type="submit" value="Submit" ng-click="searchBooks()">Submit</button></a>
         </form>
       </div>
 
@@ -78,6 +78,7 @@
   <script src="./controllers/recommendedBooksController.js"></script>
   <script src="./controllers/bookDetailsController.js"></script>
   <script src="./controllers/searchController.js"></script>
+  <script src="./controllers/searchbarController.js"></script>
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>

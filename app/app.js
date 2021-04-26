@@ -11,10 +11,10 @@ app.config(function ($routeProvider) {
     .when('/details', {
       templateUrl: './views/bookDetails.html',
       controller: 'bookDetailsController',
-    }).when('/search', {
+    })
+    .when('/search', {
       templateUrl: './views/searchBooks.html',
       controller: 'searchController',
-
     })
     .otherwise({
       redirectTo: '/',
