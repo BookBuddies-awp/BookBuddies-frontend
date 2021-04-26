@@ -32,9 +32,10 @@
 
       <div class="search" ng-controller="searchController">
         <form class="search-form">
-          <input type="text" ng-model="searchQuery"  placeholder="Search for books, authors, categories and more.."
+          <input type="text" ng-model="searchQuery" placeholder="Search for books, authors, categories and more.."
             class="sinput">
-          <input type="submit" value="Submit" onclick="searchBooks()">
+          <a href="#!/search">
+          <button type="submit" value="Submit" ng-click="searchBooks()">Submit</button></a>
         </form>
       </div>
 
@@ -80,7 +81,7 @@
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
-  
+
 
 </body>
 

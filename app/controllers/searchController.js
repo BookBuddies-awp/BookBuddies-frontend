@@ -1,9 +1,9 @@
 var app = angular.module('myApp');
 app.controller('searchController', function ($scope, booksService) {
-    $scope.searchQuery = null;
-    
+    $scope.searchQuery;
+
     console.log($scope.searchQuery);
-    searchBooks = function () {
-        booksService.searchBooks($scope.searchQuery);
+    $scope.searchBooks = function () {
+        $scope.books = booksService.searchBooks($scope.searchQuery);
     };
 });

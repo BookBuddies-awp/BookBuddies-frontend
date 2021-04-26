@@ -6,6 +6,7 @@ app.service('booksService', function ($http) {
     searchBooks,
     onSelectBook,
     getSelectedBook,
+    getSearchBooks,
     selectedBook;
 
   getBooksList = function () {
@@ -47,5 +48,6 @@ app.service('booksService', function ($http) {
     onSelectBook: onSelectBook,
     getSelectedBook: getSelectedBook,
     searchBooks: searchBooks,
+    getSearchBooks: getSearchBooks
   };
 });
