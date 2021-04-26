@@ -12,7 +12,7 @@ app.config(function ($routeProvider) {
       templateUrl: './views/bookDetails.html',
       controller: 'bookDetailsController',
     })
-    .when('/search', {
+    .when('/search/:searchQuery', {
       templateUrl: './views/searchBooks.html',
       controller: 'searchController',
     })

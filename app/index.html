@@ -34,7 +34,7 @@
         <form class="search-form">
           <input type="text" ng-model="searchQuery" placeholder="Search for books, authors, categories and more.."
             class="sinput">
-          <a href="#!/search">
+          <a ng-href="#!/search/{{searchQuery}}">
             <button type="submit" value="Submit" ng-click="searchBooks()">Submit</button></a>
         </form>
       </div>
