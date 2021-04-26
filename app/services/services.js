@@ -14,15 +14,17 @@ app.service('booksService', function ($http) {
       headers: { Authorization: 'x0G4Q1Rceqa907jhTmrD' },
     }).then(function (response) {
       books = response.data;
-      console.log(books);
+      // console.log(books);
       return books;
     });
   };
   
-  searchBooks = function (name) {
+  searchBooks = function () {
+    var name=(document.getElementById("search")).value;
+    console.log(name);
     return $http({
       method: 'GET',
-      url: 'https://bookbuddies-api.herokuapp.com/api/search?q=${name}',
+      url: `https://bookbuddies-api.herokuapp.com/api/search?q=${name}`,
       headers: { Authorization: 'x0G4Q1Rceqa907jhTmrD' },
     }).then(function (response) {
       books = response.data;
