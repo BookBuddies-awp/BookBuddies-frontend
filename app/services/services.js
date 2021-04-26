@@ -3,6 +3,7 @@ var app = angular.module('myApp');
 app.service('booksService', function ($http) {
   var books = [],
     getBooksList,
+    searchBooks,
     onSelectBook,
     getSelectedBook,
     selectedBook;
@@ -19,8 +20,7 @@ app.service('booksService', function ($http) {
     });
   };
   
-  searchBooks = function () {
-    var name=(document.getElementById("search")).value;
+  searchBooks = function (name) {
     console.log(name);
     return $http({
       method: 'GET',
@@ -46,5 +46,6 @@ app.service('booksService', function ($http) {
     getBooksList: getBooksList,
     onSelectBook: onSelectBook,
     getSelectedBook: getSelectedBook,
+    searchBooks: searchBooks,
   };
 });

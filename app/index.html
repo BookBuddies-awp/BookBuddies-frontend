@@ -30,9 +30,9 @@
       </a>
       <p class="tm-site-description">Your Online Bookstore</p>
 
-      <div class="search">
+      <div class="search" ng-controller="searchController">
         <form class="search-form">
-          <input type="text" id="search" placeholder="Search for books, authors, categories and more.."
+          <input type="text" ng-model="searchQuery"  placeholder="Search for books, authors, categories and more.."
             class="sinput">
           <input type="submit" value="Submit" onclick="searchBooks()">
         </form>
@@ -76,10 +76,11 @@
   <script src="./services//services.js"></script>
   <script src="./controllers/recommendedBooksController.js"></script>
   <script src="./controllers/bookDetailsController.js"></script>
+  <script src="./controllers/searchController.js"></script>
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
-  <script src="./js/seach.js"></script>
+  
 
 </body>
 
