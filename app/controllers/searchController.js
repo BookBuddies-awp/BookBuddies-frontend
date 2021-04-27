@@ -7,4 +7,7 @@ app.controller('searchController', function ($scope, booksService) {
     // $scope.searchedBooks = booksService.getSearchedBooks();
     console.log($scope.searchedBooks);
   });
+  $scope.onBookSelect = function (book) {
+    booksService.onSelectBook(book);
+  };
 });

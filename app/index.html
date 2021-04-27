@@ -22,12 +22,14 @@
 <body>
   <div class="container">
     <header class="tm-site-header">
+
       <a href="/">
         <h1 class="tm-site-name">
           <img src="image/main_logo.icon" alt="logo" class="main-logo">
           BookBuddies
         </h1>
       </a>
+
       <p class="tm-site-description">Your Online Bookstore</p>
 
       <div class="search" ng-controller="searchbarController">
@@ -39,37 +41,14 @@
         </form>
       </div>
 
-      <!-- <nav class="navbar navbar-expand-md tm-main-nav-container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmMainNav" aria-controls="tmMainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-            </button>
-
-            <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
-                <ul class="nav nav-fill tm-main-nav-ul">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Catalogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                </ul>
-            </div> 
-        </nav> -->
-
     </header>
 
     <div ng-view></div>
-
 
     <footer>
       Developed by BookBuddies Team 📚
     </footer>
   </div>
-
-
-  <!-- <script src="/app/js/jquery-1.11.3.min.js"></script>          
- <script src="/app/js//popper.min.js"></script>               
- <script src="/app/js//bootstrap.min.js"></script>            
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script> -->
 
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
@@ -82,7 +61,6 @@
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
-
 
 </body>
 

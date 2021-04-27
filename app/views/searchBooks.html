@@ -9,8 +9,8 @@
 
                 <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item"
                     ng-repeat="searchedBook in searchedBooks">
-                    <a href="#!/details">
-                        <div class="tm-gallery-item-overlay">
+                    <a href="#!/details/{{searchedBook.id}}">
+                        <div class="tm-gallery-item-overlay"  ng-click="onBookSelect(searchedBook)">
                             <img src="{{searchedBook.coverImage}}" alt="Image" class="img-fluid tm-img-center">
                         </div>
 
@@ -20,7 +20,7 @@
 
             </div>
 
-            <div ng-if="!books">
+            <div ng-if="!searchedbooks">
                 <h1>Loading...</h1>
             </div>
         </div>
