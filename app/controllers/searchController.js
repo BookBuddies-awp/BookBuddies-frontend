@@ -4,8 +4,7 @@ app.controller('searchController', function ($scope, booksService) {
 
   booksService.searchBooks().then(function (res) {
     $scope.searchedBooks = res;
-    // $scope.searchedBooks = booksService.getSearchedBooks();
-    console.log($scope.searchedBooks);
+    // console.log($scope.searchedBooks);
   });
   $scope.onBookSelect = function (book) {
     booksService.onSelectBook(book);

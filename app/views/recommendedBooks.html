@@ -6,7 +6,6 @@
 
         <div class="tm-gallery">
             <div class="row">
-
                 <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item" ng-repeat="book in books">
                     <a ng-href="#!/details/{{book.id}}">
                         <div class="tm-gallery-item-overlay" ng-click="onBookSelect(book)">
@@ -16,24 +15,12 @@
                         <p class="tm-figcaption">{{book.title}}</p>
                     </a>
                 </figure>
-
-
-
-
             </div>
 
             <div ng-if="!books">
                 <h1>Loading...</h1>
             </div>
-        </div>
 
-        <!-- <nav class="tm-gallery-nav">
-        <ul class="nav justify-content-center">
-          <li class="nav-item"><a class="nav-link" href="#">1</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">2</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">3</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">4</a></li>
-        </ul>
-      </nav> -->
+        </div>
     </section>
 </div>
