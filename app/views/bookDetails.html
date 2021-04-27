@@ -15,11 +15,11 @@
                 Categories: <span class="tm-blue-text" ng-repeat="category in book.categories">{{ category }}</span>
             </p>
             <p class="tm-blue-text tm-margin-b-s">Pages: {{book.pageCount}}</p>
-            <p class="tm-blue-text tm-margin-b">
-                Rating: <img src="image/star.png" alt="Star image" />
+            <p class="tm-blue-text tm-margin-b" >
+                Rating: <img ng-repeat="rating in ratings" src="image/star.png" alt="Star image" />
+                <!-- <img src="image/star.png" alt="Star image" />
                 <img src="image/star.png" alt="Star image" />
-                <img src="image/star.png" alt="Star image" />
-                <img src="image/star.png" alt="Star image" />
+                <img src="image/star.png" alt="Star image" /> -->
             </p>
             <a href="#" class="tm-btn tm-btn-gray tm-margin-r-20 tm-margin-b-s">Preview</a><a href="#"
                 class="tm-btn tm-btn-blue">Download</a>
