@@ -389,7 +389,7 @@ p.tm-margin-b-p {
 	.search
 	{
 		width: 95%;
-		margin: 0;
+		margin: auto;
     display: inline-block;
   }
 
@@ -401,6 +401,8 @@ footer {
   color: white;
   padding: 15px;
   text-align: center;
+  padding: 3rem;
+  margin-top: 50px;
 }
 
 footer a {
